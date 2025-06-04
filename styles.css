@@ -986,8 +986,6 @@ header {
     }
 
     header {
-        background-color: #fff;
-        border-bottom: 1px solid #ddd;
         padding: 10px 15px;
     }
 
@@ -995,11 +993,42 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .logo-img {
         width: 60px;
         height: auto;
+    }
+
+    .navbar-expand-lg {
+        height: 28px; /* Reduced to 50% of original 56px height */
+        width: 200px;
+    }
+
+    .navbar-toggler {
+        flex: 0 0 auto;
+        order: 0;
+        border: none;
+        padding: 2px; /* Reduced padding to fit smaller height */
+    }
+
+    .navbar-toggler-icon {
+        width: 16px; /* Reduced icon size */
+        height: 16px;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .navbar-collapse {
+        background-color: #fff;
+        padding: 5px; /* Reduced padding */
+        margin-top: 5px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .navbar-nav {
@@ -1010,13 +1039,18 @@ header {
     .navbar-nav .nav-link {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 12px; /* Reduced font size to fit smaller height */
         color: #333;
-        padding: 8px 10px;
+        padding: 4px 10px; /* Reduced padding */
+        line-height: 1; /* Adjusted line height */
     }
 
     .navbar-nav .nav-link:hover {
         color: #5cbf64;
+    }
+
+    .navbar-collapse.show {
+        display: block !important;
     }
 
     .donate-btn-container {
@@ -1025,41 +1059,16 @@ header {
         justify-content: flex-end;
         flex: 0 0 auto;
         margin: 0;
-        transform: translateY(-40px); /* Move up slightly */
+        transform: translateY(-60px);
     }
 
     .btn-donate {
-        background-color: #5cbf64;
-        color: #fff;
-        border-radius: 15px;
         padding: 6px 15px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 14px;
-        border: none;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        text-decoration: none;
-        transition: background-color 0.3s ease, color 0.3s ease;
         margin-left: 10px;
     }
 
-    .btn-donate i {
-        margin-right: 4px;
-        font-size: 12px;
-    }
-
-    .btn-donate:hover {
-        background-color: #4aa852;
-        color: #000;
-    }
-
-    .navbar-toggler {
-        flex: 0 0 auto;
-        order: -1;
-    }
+    
 
     /* ===== Hero Section ===== */
     .hero-section {
@@ -1399,6 +1408,7 @@ header {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         padding: 10px;
         margin-bottom: 15px;
+        margin-top: 15px;
         transition: transform 0.3s ease;
     }
 
@@ -1684,3 +1694,90 @@ header {
         display: flex;
         justify-content: center;
         align-items:
+    }
+
+    /* Footer Section */
+    .footer-section {
+        padding: 30px 15px; /* Reduce padding for mobile */
+    }
+
+    .footer-section .container {
+        padding: 0 10px; /* Align with other sections' mobile padding */
+    }
+
+    .footer-logo {
+        width: 60px; /* Smaller logo for mobile */
+        margin-bottom: 10px;
+    }
+
+    .footer-description {
+        font-size: 12px; /* Reduce font size */
+        line-height: 20px;
+        width: 100%; /* Full width for readability */
+    }
+
+    .footer-social-icons {
+        gap: 10px; /* Smaller gap between icons */
+    }
+
+    .social-icon {
+        width: 28px; /* Smaller icons */
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .footer-heading {
+        font-size: 16px; /* Smaller heading */
+        margin-bottom: 8px;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links .link-icon {
+        font-size: 14px; /* Smaller icon */
+        margin-right: 6px;
+    }
+
+    .footer-links a {
+        font-size: 12px; /* Smaller link text */
+    }
+
+    .footer-email-input {
+        height: 40px; /* Smaller input height */
+        padding: 8px 100px 8px 10px; /* Adjust padding for button */
+        font-size: 12px; /* Smaller font */
+    }
+
+    .footer-subscribe-btn {
+        padding: 6px 12px; /* Smaller button */
+        font-size: 12px; /* Smaller font */
+        right: 4px;
+    }
+
+    .footer-subscribe-btn i {
+        font-size: 12px; /* Smaller icon */
+        margin-right: 4px;
+    }
+
+    .footer-subscribe-message {
+        font-size: 12px; /* Smaller message */
+        margin-top: 8px;
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stack copyright and links */
+        gap: 10px; /* Space between stacked elements */
+        padding-top: 10px;
+    }
+
+    .footer-bottom-left p,
+    .footer-bottom-right a {
+        font-size: 10px; /* Smaller text */
+    }
+
+    .footer-bottom-right {
+        gap: 15px; /* Smaller gap between links */
+    }
+}
